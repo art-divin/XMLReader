@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = "XML"
-  s.version          = "0.2.1"
+  s.version          = "0.2.2"
   s.summary          = "Objective-C XML Helpers"
   s.homepage         = "https://github.com/BambooHR/xml-ios"
   s.license          = 'MIT'
