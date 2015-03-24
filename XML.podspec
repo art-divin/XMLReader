@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = "XML"
-  s.version          = "0.2.0"
+  s.version          = "0.2.1"
   s.summary          = "Objective-C XML Helpers"
   s.homepage         = "https://github.com/BambooHR/xml-ios"
   s.license          = 'MIT'
@@ -9,7 +9,14 @@ Pod::Spec.new do |s|
 
   s.platform     = :ios, '6.1'
   s.requires_arc = true
-
-  s.source_files = '*.{h,m}'
-  s.public_header_files = '*.h'
+  
+  s.subspec 'XMLReader' do |ss|
+    ss.requires_arc = true
+    ss.source_files = 'XMLReader/*.{h,m}'
+  end
+  
+  s.subspec 'XMLWriter' do |ss|
+    ss.requires_arc = false
+    ss.source_files = 'XMLWriter/*.{h,m}'
+  end
 end
